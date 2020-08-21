@@ -108,8 +108,8 @@ namespace SIPSorcery.SIP
         /// <returns>If successful a SIP message or null if not.</returns>
         public static SIPMessageBuffer ParseSIPMessage(string message, SIPEndPoint localSIPEndPoint, SIPEndPoint remoteSIPEndPoint)
         {
-            try
-            {
+            //try
+            //{
                 SIPMessageBuffer sipMessage = new SIPMessageBuffer();
                 sipMessage.LocalSIPEndPoint = localSIPEndPoint;
                 sipMessage.RemoteSIPEndPoint = remoteSIPEndPoint;
@@ -161,12 +161,12 @@ namespace SIPSorcery.SIP
                     logger.LogWarning("Error ParseSIPMessage, there were no end of line characters in the string being parsed.");
                     return null;
                 }
-            }
-            catch (Exception excp)
-            {
-                logger.LogError("Exception ParseSIPMessage. " + excp.Message + "\nSIP Message=" + message + ".");
-                return null;
-            }
+            //}
+            //catch (Exception excp)
+            //{
+            //    logger.LogError("Exception ParseSIPMessage. " + excp.Message + "\nSIP Message=" + message + ".");
+            //    return null;
+            //}
         }
 
         //rj2: check if message could be "well"known Ping message
