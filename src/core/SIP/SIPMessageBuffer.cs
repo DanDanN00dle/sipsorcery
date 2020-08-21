@@ -159,7 +159,8 @@ namespace SIPSorcery.SIP
                 else
                 {
                     logger.LogWarning("Error ParseSIPMessage, there were no end of line characters in the string being parsed.");
-                    return null;
+                throw new Exception("Error ParseSIPMessage, there were no end of line characters in the string being parsed.");
+                    //return null;
                 }
             //}
             //catch (Exception excp)
