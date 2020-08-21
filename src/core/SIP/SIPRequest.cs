@@ -109,13 +109,13 @@ namespace SIPSorcery.SIP
             {
                 throw;
             }
-            catch (Exception excp)
-            {
-                logger.LogError("Exception parsing SIP Request. " + excp.Message);
-                logger.LogError(sipMessage.RawMessage);
-                throw;
-                //throw new SIPValidationException(SIPValidationFieldsEnum.Request, "Unknown error parsing SIP Request");
-            }
+            //catch (Exception excp)
+            //{
+            //    logger.LogError("Exception parsing SIP Request. " + excp.Message);
+            //    logger.LogError(sipMessage.RawMessage);
+            //    throw;
+            //    //throw new SIPValidationException(SIPValidationFieldsEnum.Request, "Unknown error parsing SIP Request");
+            //}
         }
 
         public static SIPRequest ParseSIPRequest(string sipMessageStr)
@@ -129,13 +129,13 @@ namespace SIPSorcery.SIP
             {
                 throw;
             }
-            catch (Exception excp)
-            {
-                logger.LogError("Exception ParseSIPRequest. " + excp.Message);
-                logger.LogError(sipMessageStr);
-                throw;
-                //throw new SIPValidationException(SIPValidationFieldsEnum.Request, $"Unknown error parsing SIP Request: {excp.Message}");
-            }
+            //catch (Exception excp)
+            //{
+            //    logger.LogError("Exception ParseSIPRequest. " + excp.Message);
+            //    logger.LogError(sipMessageStr);
+            //    throw;
+            //    //throw new SIPValidationException(SIPValidationFieldsEnum.Request, $"Unknown error parsing SIP Request: {excp.Message}");
+            //}
         }
 
         public override string ToString()
