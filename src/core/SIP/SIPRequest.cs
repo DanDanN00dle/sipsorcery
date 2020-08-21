@@ -113,7 +113,8 @@ namespace SIPSorcery.SIP
             {
                 logger.LogError("Exception parsing SIP Request. " + excp.Message);
                 logger.LogError(sipMessage.RawMessage);
-                throw new SIPValidationException(SIPValidationFieldsEnum.Request, "Unknown error parsing SIP Request");
+                throw;
+                //throw new SIPValidationException(SIPValidationFieldsEnum.Request, "Unknown error parsing SIP Request");
             }
         }
 
